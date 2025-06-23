@@ -1,5 +1,5 @@
 ## Description
-Application that allows users to upload and manage their documents.
+This project provides a secure and scalable backend for document storage, indexing, and search using AWS and Apache Kafka. It leverages AWS Cognito for authentication, AWS S3 for storage, AWS OpenSearch for indexing and querying, and Kafka for event-driven processing.
 
 Tech stack: Nest.js, Kafka, AWS Cognito, AWS OpenSearch, AWS S3
 
@@ -50,3 +50,11 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## 🚀 Features
+
+- 🔐 **Authentication with AWS Cognito**
+- 📄 **Upload and store documents in AWS S3**
+- 🔍 **Full-text search with AWS OpenSearch**
+- ⚙️ **Kafka-based asynchronous indexing**
+- 🧾 **User-based document access control**
