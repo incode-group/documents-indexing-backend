@@ -1,3 +1,3 @@
 export class SuccessResponseDto {
-    message: string;
+  message: string;
 }

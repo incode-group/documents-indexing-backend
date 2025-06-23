@@ -1,9 +1,11 @@
 ## Description
+
 This project provides a secure and scalable backend for document storage, indexing, and search using AWS and Apache Kafka. It leverages AWS Cognito for authentication, AWS S3 for storage, AWS OpenSearch for indexing and querying, and Kafka for event-driven processing.
 
 Tech stack: Nest.js, Kafka, AWS Cognito, AWS OpenSearch, AWS S3
 
 ## Setup AWS services
+
 AWS Cognito: https://aws.amazon.com/cognito/
 AWS OpenSearch: https://aws.amazon.com/opensearch-service/
 AWS S3: https://aws.amazon.com/s3/

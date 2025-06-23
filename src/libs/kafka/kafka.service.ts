@@ -1,6 +1,6 @@
-import { Injectable, OnModuleInit } from "@nestjs/common";
-import { ConfigService } from "@nestjs/config";
-import { Kafka, Producer } from "kafkajs";
+import { Injectable, OnModuleInit } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { Kafka, Producer } from 'kafkajs';
 
 @Injectable()
 export class KafkaService implements OnModuleInit {
@@ -12,14 +12,26 @@ export class KafkaService implements OnModuleInit {
     this.producer = this.kafka.producer();
   }
 
-  getClient() {
-    return this.kafka;
-  }
-
+  /**
+   * Initializes the Kafka producer when the module is initialized.
+   */
   async onModuleInit() {
     await this.producer.connect();
   }
 
+  /**
+   * Returns the Kafka client instance.
+   * @returns The Kafka client.
+   */
+  getClient() {
+    return this.kafka;
+  }
+
+  /**
+   * Sends a message to a Kafka topic.
+   * @param topic The Kafka topic to send the message to.
+   * @param message The message to send.
+   */
   async send(topic: string, message: any) {
     await this.producer.send({
       topic,

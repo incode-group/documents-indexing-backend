@@ -7,6 +7,6 @@ import { AwsModule } from 'src/libs/aws/aws.module';
   imports: [AwsModule],
   providers: [UploadsService],
   controllers: [UploadsController],
-  exports: [UploadsService] 
+  exports: [UploadsService],
 })
 export class UploadsModule {}
